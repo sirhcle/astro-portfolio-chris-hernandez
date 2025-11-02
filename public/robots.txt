@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sirhcleapps.com/sitemap-index.xml
+Sitemap: https://www.chrishernandez.dev/sitemap-index.xml
