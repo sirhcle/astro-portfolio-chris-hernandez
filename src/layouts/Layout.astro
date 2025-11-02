@@ -27,14 +27,14 @@ const currentYear = new Date().getFullYear();
     <meta property="og:url" content={Astro.url.href} />
     <meta property="og:site_name" content="Chris Hernández | Desarrollador Full Stack" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={new URL('src/assets/chris-hr.jpeg', Astro.url).href} />
+    <meta property="og:image" content={new URL('/chris-hr.jpeg', Astro.url).href} />
     <meta property="og:image:alt" content="Retrato de Chris Hernández, desarrollador Full Stack" />
 
     <!-- Twitter Card (para Twitter/X) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL('src/assets/chris-hr.jpeg', Astro.url).href} />
+    <meta name="twitter:image" content={new URL('/chris-hr.jpeg', Astro.url).href} />
     <meta name="twitter:image:alt" content="Retrato de Chris Hernández, desarrollador Full Stack" />
 
     <!-- Favicon y Temas de Color -->
@@ -46,17 +46,8 @@ const currentYear = new Date().getFullYear();
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Estilos -->
-    <style is:inline>
-        /* CSS crítico para la pantalla de carga */
-        @import "/src/styles/critical/loading.css";
-    </style>
-    <link rel="stylesheet" href="/src/styles/main.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="/src/styles/main.css" /></noscript>
-
     <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -79,9 +70,6 @@ const currentYear = new Date().getFullYear();
         <span>↑</span>
     </button>
 
-    <!-- JavaScript Modules -->
-    <script type="module" src="/src/scripts/main.js"></script>
-    
     <!-- Loading Screen Script (crítico - inline) -->
     <script is:inline>
         const hideLoading = () => {

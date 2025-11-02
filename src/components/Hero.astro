@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import chrisImage from "../assets/chris-hr.jpeg";
 ---
 
 <section id="inicio" class="hero">
@@ -60,7 +61,7 @@ import { Image } from "astro:assets";
             <div class="avatar-container">
                 <div class="avatar-bg"></div>
                 <Image
-                    src={import.meta.env.BASE_URL + "src/assets/chris-hr.jpeg"}
+                    src={chrisImage}
                     alt="Christian - Sirhcle Apps"
                     class="avatar-img"
                     width={300}
