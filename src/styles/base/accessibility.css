@@ -1,0 +1,97 @@
+/*!
+ * Accessibility Features
+ * Focus management, reduced motion, screen readers
+ */
+
+/* Focus Management */
+:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+/* Screen Reader Only Content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Skip Links */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    padding: 8px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    z-index: var(--z-toast);
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .loading-overlay {
+        display: none !important;
+    }
+}
+
+/* High contrast support */
+@media (forced-colors: active) {
+    .btn-primary,
+    .btn-secondary {
+        border: 1px solid ButtonText;
+    }
+}
+
+/* Touch target sizes */
+button, 
+input, 
+select, 
+textarea,
+.btn-primary,
+.btn-secondary,
+.nav-link {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Ensure text is selectable */
+.hero-title,
+.section-title,
+p {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}

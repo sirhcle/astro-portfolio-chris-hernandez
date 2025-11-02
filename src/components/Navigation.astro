@@ -1,0 +1,38 @@
+---
+// src/components/Navigation.astro
+---
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-name">Chris</span>
+            <span class="logo-bracket">/&gt;</span>
+            <span class="logo-brand">Sirhcle Apps</span>
+        </div>
+        
+        <div class="nav-menu" id="navMenu">
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#proyectos" class="nav-link">Proyectos</a>
+            <a href="#experiencia" class="nav-link">Experiencia</a>
+            <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </div>
+        
+        <!-- Theme Toggle -->
+        <div class="theme-toggle">
+            <button id="theme-switcher" class="theme-btn" aria-label="Cambiar tema" type="button">
+                <span class="theme-icon sun">☀️</span>
+                <span class="theme-icon moon">🌙</span>
+                <div class="theme-slider"></div>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Menú" type="button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+</nav>

@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section id="inicio" class="hero">
+    <div class="hero-bg">
+        <div class="code-lines">
+            <span class="code-line">const developer = &#123;</span>
+            <span class="code-line"> name: 'Christian',</span>
+            <span class="code-line"> brand: 'Sirhcle Apps',</span>
+            <span class="code-line">
+                skills: ['Flutter', 'JavaScript', 'React', 'Native'],</span
+            >
+            <span class="code-line"> passion: 'crear soluciones'</span>
+            <span class="code-line">&#125;;</span>
+        </div>
+    </div>
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-greeting">
+                <span class="pixel-cursor">_</span>
+                <span>Hola, soy Chris Hernández</span>
+            </div>
+            <h1 class="hero-title">
+                Desarrollador <span class="gradient-text">Full Stack</span>
+                <br />& Freelancer
+            </h1>
+            <div class="hero-brand">
+                <span class="brand-line"></span>
+                <span class="brand-text">Sirhcle Apps</span>
+                <span class="brand-line"></span>
+            </div>
+            <p class="hero-subtitle">
+                Transformo ideas complejas en soluciones digitales elegantes y funcionales. Me especializo en desarrollo de <strong>aplicaciones móviles</strong> (iOS y Android) e <strong>interfaces web</strong> interactivas. Construyo productos intuitivos que resuelven problemas reales e impulsan el crecimiento empresarial.
+            </p>
+
+            <div class="hero-cta">
+                <a href="#proyectos" class="btn-primary">
+                    <span>Ver Proyectos</span>
+                    <div class="btn-pixels"></div>
+                </a>
+                <a href="#contacto" class="btn-secondary"
+                    >Hablemos de tu proyecto</a
+                >
+            </div>
+            <div class="hero-stats">
+                
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Años Experiencia</span>
+                </div>
+                <div class="stat-divider">|</div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Compromiso</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-avatar">
+            <div class="avatar-container">
+                <div class="avatar-bg"></div>
+                <Image
+                    src={import.meta.env.BASE_URL + "src/assets/chris-hr.jpeg"}
+                    alt="Christian - Sirhcle Apps"
+                    class="avatar-img"
+                    width={300}
+                    height={300}
+                    loading="eager"
+                />
+                <div class="avatar-border"></div>
+                <div class="avatar-brand">Sirhcle Apps</div>
+            </div>
+        </div>
+    </div>
+</section>

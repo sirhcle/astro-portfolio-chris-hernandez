@@ -1,0 +1,317 @@
+---
+import { Image } from "astro:assets";
+import project1 from "../assets/project-liverpool-pocket.png";
+import project2 from "../assets/project-stori-app.png";
+import project3 from "../assets/project-superapp-liverpool.png";
+import project4 from "../assets/project-portfolio.png";
+import project5 from "../assets/project-todo-list.png";
+import project6 from "../assets/project-pokedesk.png";
+---
+
+<section id="proyectos" class="projects">
+    <div class="container">
+        <header class="section-header">
+            <h2 class="section-title" data-animate="fade-up">
+                <span class="title-bracket">[</span>
+                Proyectos Destacados
+                <span class="title-bracket">]</span>
+            </h2>
+            <p class="section-subtitle" data-animate="fade-up" data-delay="100">
+                Soluciones reales construidas con pasión y tecnología
+            </p>
+        </header>
+
+        <div class="projects-grid">
+            <!-- Featured Project -->
+            <article
+                class="project-card featured"
+                data-animate="fade-up"
+                data-delay="200"
+            >
+                <div class="project-image">
+                    <Image
+                        src={project1}
+                        alt="Liverpool Pocket"
+                        width={500}
+                        height={300}
+                        loading="lazy"
+                    />
+                    <div class="project-overlay">
+                        <a
+                            href="https://apps.apple.com/mx/app/liverpool-compra-en-l%C3%ADnea/id1148204349"
+                            class="project-link demo-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            App Store
+                        </a>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=mx.com.liverpool.shoppingapp"
+                            class="project-link demo-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Google Play
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="project-info">
+                    <div class="project-type">⭐ Proyecto Destacado</div>
+                    <h3 class="project-title">Liverpool Pocket</h3>
+                    <p class="project-description">
+                        Fui parte del equipo de desarrollo original que lanzó la primera versión de Liverpool Pocket, estableciendo un nuevo y exitoso canal de ventas en línea para una de las mayores empresas de retail en México.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">iOS</span>
+                        <span class="tech-tag">Mobile App</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Other Projects -->
+            <article
+                class="project-card"
+                data-animate="fade-up"
+                data-delay="100"
+            >
+                <div class="project-image">
+                    <Image
+                        src={project2}
+                        alt="Stori App"
+                        width={400}
+                        height={250}
+                        loading="lazy"
+                    />
+                    <div class="project-overlay">
+                        <a
+                            href="https://apps.apple.com/mx/app/stori-cr%C3%A9dito-y-ahorro/id1486481718"
+                            class="project-link demo-link"
+                            target="_blank"
+                            rel="noopener noreferrer">App Store</a
+                        >
+                        <a
+                            href="https://play.google.com/store/apps/details?id=ai.powerup.stori"
+                            class="project-link demo-link"
+                            target="_blank"
+                            rel="noopener noreferrer">Google Play</a
+                        >
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">Mobile App</div>
+                    <h3 class="project-title">Stori App</h3>
+                    <p class="project-description">
+                        Desarrollé funcionalidades clave para la app de Stori, una solución de crédito para la población no bancarizada en México. El objetivo fue crear una plataforma móvil robusta y fácil de usar que eliminara las barreras de acceso a los servicios financieros tradicionales.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Objective-C, Swift, Swift UI</span>
+                        <span class="tech-tag">iOS</span>
+                        <span class="tech-tag">Mobile App</span>
+                    </div>
+                </div>
+            </article>
+
+            <article
+                class="project-card"
+                data-animate="fade-up"
+                data-delay="100"
+            >
+                <div class="project-image">
+                    <Image
+                        src={project3}
+                        alt="Super App Liverpool"
+                        width={400}
+                        height={250}
+                        loading="lazy"
+                    />
+                    <div class="project-overlay">
+                        <button
+                            class="project-link demo-link modal-trigger"
+                            data-modal-target="case-study-modal"
+                            type="button">Caso de Estudio</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">Mobile App</div>
+                    <h3 class="project-title">Super App Liverpool</h3>
+                    <p class="project-description">
+                        Desarrollo de la "Super App" interna para Liverpool, una solución estratégica en Flutter diseñada para centralizar y optimizar los procesos diarios de los empleados en tienda. La aplicación integra múltiples herramientas existentes en una única plataforma cohesiva, mejorando la eficiencia operativa y la comunicación. Su arquitectura modular permite una evolución constante, con la capacidad de agregar nuevos módulos de forma ágil para responder a las necesidades del negocio.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Mobile UI/UX</span>
+                    </div>
+                </div>
+            </article>
+
+            <article
+                class="project-card"
+                data-animate="fade-up"
+                data-delay="100"
+            >
+                <div class="project-image">
+                    <Image
+                        src={project4}
+                        alt="Mi portafolio - Primera versión"
+                        width={400}
+                        height={250}
+                        loading="lazy"
+                    />
+                    <div class="project-overlay">
+                        <a
+                            href="https://react-portfolio-silk-omega.vercel.app/"
+                            class="project-link demo-link"
+                            target="_blank"
+                            rel="noopener noreferrer">Demo Live</a
+                        >
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">Web</div>
+                    <h3 class="project-title">Primera versión de mi portafolio</h3>
+                    <p class="project-description">
+                        La primera iteración de mi portafolio personal, construida desde cero con React. El objetivo fue crear una Single Page Application (SPA) rápida y moderna para presentar mi trayectoria profesional y mis proyectos de manera efectiva.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                </div>
+            </article>
+
+            <article
+                class="project-card"
+                data-animate="fade-up"
+                data-delay="100"
+            >
+                <div class="project-image">
+                    <Image
+                        src={project5}
+                        alt="ToDo List"
+                        width={400}
+                        height={250}
+                        loading="lazy"
+                    />
+                    <div class="project-overlay">
+                        <a
+                            href="https://beauty-todo-list.vercel.app/"
+                            class="project-link demo-link"
+                            target="_blank"
+                            rel="noopener noreferrer">Demo Live</a
+                        >
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">Utilidad Web</div>
+                    <h3 class="project-title">ToDo List</h3>
+                    <p class="project-description">
+                        Aplicación web en react para crear una sencilla lista de tareas (ToDo List) que permite a los usuarios agregar, marcar como completadas y eliminar tareas. La aplicación utiliza almacenamiento local para guardar las tareas, asegurando que permanezcan disponibles incluso después de cerrar el navegador.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Local Storage</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                </div>
+            </article>
+
+            <article
+                class="project-card"
+                data-animate="fade-up"
+                data-delay="100"
+            >
+                <div class="project-image">
+                    <Image
+                        src={project6}
+                        alt="Pokedesk"
+                        width={400}
+                        height={250}
+                        loading="lazy"
+                    />
+                    <div class="project-overlay">
+                        <a
+                            href="https://pokedex-react-app-murex.vercel.app/"
+                            class="project-link demo-link"
+                            target="_blank"
+                            rel="noopener noreferrer">Demo Live</a
+                        >
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">Utilidad Web</div>
+                    <h3 class="project-title">Pokedesk</h3>
+                    <p class="project-description">
+                        Aplicación web hecha en react que permite buscar y visualizar información de los Pokémon utilizando la PokéAPI. Los usuarios pueden buscar Pokémon por nombre o ID, ver sus estadísticas, tipos y habilidades, todo presentado en una interfaz amigable y responsiva.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- <div class="projects-cta" data-animate="fade-up" data-delay="700">
+            <a
+                href="https://github.com/sirhcle"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline"
+            >
+                Ver todos mis proyectos en GitHub
+            </a>
+        </div> -->
+    </div>
+
+    <!-- Modal para Caso de Estudio -->
+    <div id="case-study-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title">
+                    📱 Super App Liverpool - Caso de Estudio
+                </h2>
+                <button class="modal-close" id="modal-close" aria-label="Cerrar modal">
+                    <span>×</span>
+                </button>
+            </div>
+            
+            <div class="modal-content" id="modal-content">
+                <div class="case-study-section">
+                    <h3 class="section-title">🎯 Objetivo del Proyecto</h3>
+                    <p class="section-description">
+                        Centralizar múltiples herramientas y procesos de los empleados en tienda mediante una solución estratégica que unifique el ecosistema tecnológico interno.
+                    </p>
+                </div>
+
+                <div class="case-study-section">
+                    <h3 class="section-title">⚡ Mi Rol y Contribución</h3>
+                    <ul class="contribution-list">
+                        <li>Desarrollador Flutter senior</li>
+                        <li>Liderazgo técnico en la implementación del módulo "Contacto Logístico"</li>
+                        <li>Diseño e implementación de arquitectura modular escalable</li>
+                        <li>Configuración y gestión de la base de paquetes adicionales desarrollados por otros equipos</li>
+                        <li>Supervisión de la integración de componentes externos al proyecto principal</li>
+                        <li>Desarrollo de múltiples módulos de negocio críticos</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h3 class="section-title">🛠️ Stack Tecnológico</h3>
+                    <div class="tech-stack-modal">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Dart</span>
+                        <span class="tech-badge">APIs REST</span>
+                        <span class="tech-badge">Microservicios</span>
+                        <span class="tech-badge">Arquitectura Modular</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

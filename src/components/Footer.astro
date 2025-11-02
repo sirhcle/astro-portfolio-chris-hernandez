@@ -1,0 +1,31 @@
+---
+// src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content" data-animate="fade-up">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-name">Chris</span>
+                <span class="logo-bracket">/&gt;</span>
+                <span class="logo-brand">Sirhcle Apps</span>
+            </div>
+            <p class="footer-text">
+                Desarrollador Full Stack & Freelancer | Transformando ideas en realidad digital
+            </p>
+            <!-- <nav class="footer-links">
+                <a href="https://github.com/sirhcle" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="#contacto">Contacto</a>
+                <a href="https://linkedin.com/in/christian-sirhcle" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </nav> -->
+        </div>
+        <div class="footer-bottom" data-animate="fade-up" data-delay="100">
+            <p>&copy; <span id="current-year">{currentYear}</span> Chris Hernández | Sirhcle Apps. Hecho con dedicación y mucho café ☕</p>
+            <div class="footer-pronunciation">
+                <small>Sirhcle se pronuncia: <span class="pronunciation">"SIR-cle"</span> 🎯</small>
+            </div>
+        </div>
+    </div>
+</footer>

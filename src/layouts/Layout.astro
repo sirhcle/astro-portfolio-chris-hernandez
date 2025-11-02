@@ -1,0 +1,109 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Chris Hernández, desarrollador mobile y Full Stack freelancer." } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO y Metadatos Esenciales -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="desarrollador flutter, desarrollador mobile, desarrollador iOS, freelancer react, freelancer mobile, freelancer iOS, desarrollador full stack, aplicaciones móviles, Chris Hernández, CDMX" />
+    <meta name="author" content="Chris Hernández" />
+    <link rel="canonical" href={Astro.url.href} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (para Redes Sociales como Facebook, LinkedIn) -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:site_name" content="Chris Hernández | Desarrollador Full Stack" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={new URL('src/assets/chris-hr.jpeg', Astro.url).href} />
+    <meta property="og:image:alt" content="Retrato de Chris Hernández, desarrollador Full Stack" />
+
+    <!-- Twitter Card (para Twitter/X) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL('src/assets/chris-hr.jpeg', Astro.url).href} />
+    <meta name="twitter:image:alt" content="Retrato de Chris Hernández, desarrollador Full Stack" />
+
+    <!-- Favicon y Temas de Color -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#64ffda" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#0066cc" media="(prefers-color-scheme: light)" />
+
+    <!-- Pre-conexión para Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Estilos -->
+    <style is:inline>
+        /* CSS crítico para la pantalla de carga */
+        @import "/src/styles/critical/loading.css";
+    </style>
+    <link rel="stylesheet" href="/src/styles/main.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="/src/styles/main.css" /></noscript>
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+        <div class="loading-brand">
+            <span class="logo-bracket">&lt;</span>
+            Sirhcle Apps
+            <span class="logo-bracket">/&gt;</span>
+        </div>
+        <div class="loader" role="status" aria-label="Cargando contenido"></div>
+        <div class="loading-text">Cargando experiencia...</div>
+    </div>
+
+    
+    
+    <slot />
+    
+    <button id="backToTop" class="back-to-top" aria-label="Volver al inicio" style="display: none;">
+        <span>↑</span>
+    </button>
+
+    <!-- JavaScript Modules -->
+    <script type="module" src="/src/scripts/main.js"></script>
+    
+    <!-- Loading Screen Script (crítico - inline) -->
+    <script is:inline>
+        const hideLoading = () => {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.classList.add('hide');
+                setTimeout(() => loadingOverlay.style.display = 'none', 500);
+            }
+        };
+
+        const minLoadTime = 1200;
+        const startTime = performance.now();
+
+        if (document.readyState === 'complete') {
+            const elapsed = performance.now() - startTime;
+            setTimeout(hideLoading, Math.max(0, minLoadTime - elapsed));
+        } else {
+            window.addEventListener('load', () => {
+                const elapsed = performance.now() - startTime;
+                setTimeout(hideLoading, Math.max(0, minLoadTime - elapsed));
+            });
+        }
+    </script>
+</body>
+</html>

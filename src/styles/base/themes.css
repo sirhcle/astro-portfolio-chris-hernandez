@@ -1,0 +1,45 @@
+/*!
+ * Theme System
+ * System preference detection and theme switching
+ */
+
+/* System preference detection */
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+        --bg-primary: #ffffff;
+        --text-primary: #0f172a;
+        --accent-primary: #0066cc;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --bg-primary: #0a0a0a;
+        --text-primary: #ffffff;
+        --accent-primary: #64ffda;
+    }
+}
+
+/* Theme transition animations */
+* {
+    transition: background-color var(--transition-base), 
+                color var(--transition-base),
+                border-color var(--transition-base);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --border-primary: currentColor;
+        --border-secondary: currentColor;
+    }
+}
+
+/* Print theme override */
+@media print {
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+}

@@ -1,0 +1,140 @@
+/*!
+ * CSS Custom Properties (Variables)
+ * Design System for Sirhcle Apps Portfolio
+ */
+
+:root {
+    /* Base System Fonts for Performance */
+    --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    --font-primary: 'Inter', var(--font-system);
+    --font-code: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+    
+    /* Animation & Transitions */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Layout & Spacing */
+    --border-radius-sm: 4px;
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-base: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    
+    /* Z-Index Scale */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-toast: 9999;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    /* Background Colors */
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a2e;
+    --bg-tertiary: #16213e;
+    --bg-card: #16213e;
+    --bg-elevated: #1e293b;
+    --bg-overlay: rgba(10, 10, 10, 0.9);
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --text-muted: #64748b;
+    --text-disabled: #475569;
+    
+    /* Accent Colors */
+    --accent-primary: #64ffda;
+    --accent-secondary: #ff6b6b;
+    --accent-tertiary: #4ecdc4;
+    --accent-warning: #ffd93d;
+    --accent-success: #6bcf7f;
+    --accent-info: #4dabf7;
+    
+    /* Interactive States */
+    --color-focus: #64ffda;
+    --color-link: #64ffda;
+    --color-link-hover: #4ecdc4;
+    --color-button-hover: rgba(100, 255, 218, 0.1);
+    
+    /* Borders & Dividers */
+    --border-primary: rgba(100, 255, 218, 0.2);
+    --border-secondary: rgba(203, 213, 225, 0.1);
+    --divider: rgba(203, 213, 225, 0.08);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.25);
+    --shadow-accent: 0 8px 32px rgba(100, 255, 218, 0.15);
+    --shadow-accent-lg: 0 20px 40px rgba(100, 255, 218, 0.2);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #64ffda 0%, #4ecdc4 100%);
+    --gradient-secondary: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(100, 255, 218, 0.1) 0%, rgba(78, 205, 196, 0.05) 100%);
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-card: #ffffff;
+    --bg-elevated: #f8fafc;
+    --bg-overlay: rgba(255, 255, 255, 0.95);
+    
+    /* Text Colors */
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-tertiary: #475569;
+    --text-muted: #64748b;
+    --text-disabled: #94a3b8;
+    
+    /* Accent Colors */
+    --accent-primary: #0066cc;
+    --accent-secondary: #dc2626;
+    --accent-tertiary: #0891b2;
+    --accent-warning: #d97706;
+    --accent-success: #059669;
+    --accent-info: #2563eb;
+    
+    /* Interactive States */
+    --color-focus: #0066cc;
+    --color-link: #0066cc;
+    --color-link-hover: #0052a3;
+    --color-button-hover: rgba(0, 102, 204, 0.08);
+    
+    /* Borders & Dividers */
+    --border-primary: rgba(0, 102, 204, 0.2);
+    --border-secondary: rgba(148, 163, 184, 0.3);
+    --divider: rgba(148, 163, 184, 0.2);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-accent: 0 8px 32px rgba(0, 102, 204, 0.12);
+    --shadow-accent-lg: 0 20px 40px rgba(0, 102, 204, 0.15);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+    --gradient-secondary: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 82, 163, 0.02) 100%);
+}

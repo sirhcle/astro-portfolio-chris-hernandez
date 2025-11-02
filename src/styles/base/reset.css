@@ -1,0 +1,84 @@
+/*!
+ * Reset & Base Styles
+ * Foundation styles for consistent cross-browser behavior
+ */
+
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* Remove default list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default button styles */
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Remove default link underlines */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Make images responsive by default */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove default form element styles */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Improve text rendering */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Base container utility */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: var(--spacing-base);
+        padding-right: var(--spacing-base);
+    }
+}
