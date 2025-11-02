@@ -262,12 +262,16 @@
         height: 28px;
     }
     
-    .theme-slider {
-        width: 20px;
-        height: 20px;
-    }
-    
     [data-theme="dark"] .theme-slider {
         transform: translateX(20px);
+        width: 20px;
+        height: 20px;
+        top: 10px;
+    }
+
+    [data-theme="light"] .theme-slider {
+        width: 20px;
+        height: 20px;
+        
     }
 }
