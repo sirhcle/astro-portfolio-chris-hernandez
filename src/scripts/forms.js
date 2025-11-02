@@ -96,7 +96,7 @@ export class FormManager {
             return;
         }
         
-        this.submitForm(name, email, project);
+        this.submitToFormspree();
     }
 
     validateForm(name, email, projectType, project, privacy) {
@@ -132,7 +132,41 @@ export class FormManager {
         alert(message); // Temporal, puedes mejorarlo con un modal o toast
     }
 
+    submitToFormspree() {
+        this.isSubmitting = true;
+        this.setSubmitState(true);
+        
+        // Crear FormData con todos los campos del formulario
+        const formData = new FormData(this.contactForm);
+        
+        // Enviar a Formspree
+        fetch(this.contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                this.handleSubmitSuccess();
+            } else {
+                response.json().then(data => {
+                    if (data.errors) {
+                        this.handleSubmitError('Error en el formulario: ' + data.errors.map(error => error.message).join(', '));
+                    } else {
+                        this.handleSubmitError('Error al enviar el formulario. Por favor intenta nuevamente.');
+                    }
+                });
+            }
+        })
+        .catch(error => {
+            this.handleSubmitError('Error de conexión. Por favor verifica tu internet e intenta nuevamente.');
+        });
+    }
+
     submitForm(name, email, project) {
+        // Método legacy - ya no se usa
         this.isSubmitting = true;
         this.setSubmitState(true);
         
@@ -174,6 +208,20 @@ export class FormManager {
         
         // Track success event
         this.trackEvent('form_submit', 'contact', 'success');
+    }
+
+    handleSubmitError(message) {
+        if (this.statusElement && Utils.isHTMLElement(this.statusElement)) {
+            this.statusElement.className = 'form-status error';
+            this.statusElement.textContent = message;
+            this.statusElement.style.display = 'block';
+        }
+        
+        this.isSubmitting = false;
+        this.setSubmitState(false);
+        
+        // Track error event
+        this.trackEvent('form_submit', 'contact', 'error');
     }
 
     trackEvent(action, category, label) {
