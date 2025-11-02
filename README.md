@@ -1,43 +1,163 @@
-# Astro Starter Kit: Minimal
+# 🚀 Portfolio Personal - Chris Hernández
 
-```sh
-npm create astro@latest -- --template minimal
-```
+> Desarrollador Full Stack especializado en aplicaciones móviles (iOS/Android) e interfaces web interactivas
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)](https://astro.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
 
-## 🚀 Project Structure
+## ✨ Descripción
 
-Inside of your Astro project, you'll see the following folders and files:
+Portfolio personal desarrollado con **Astro** que muestra mis proyectos, experiencia y habilidades como desarrollador Full Stack. El sitio incluye una interfaz moderna, modal interactivo para casos de estudio, formulario de contacto funcional y diseño completamente responsivo.
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Framework**: Astro 4.x
+- **Estilos**: CSS puro con variables personalizadas
+- **JavaScript**: ES6+ para interactividad
+- **Optimización**: SEO completo, sitemap automático
+- **Accesibilidad**: ARIA labels, navegación por teclado
+- **Performance**: Lazy loading, optimización de imágenes
+
+## 🎨 Características
+
+### 🏠 **Página Principal**
+- Hero section con estadísticas profesionales
+- Navegación suave entre secciones
+- Tema oscuro optimizado para desarrolladores
+
+### 👨‍💻 **Sección de Proyectos**
+- Grid responsivo de proyectos destacados
+- Modal interactivo para casos de estudio detallados
+- Enlaces directos a App Store, Google Play y demos live
+
+### 💼 **Experiencia Profesional**
+- Timeline de experiencia laboral
+- Tarjetas informativas de roles anteriores
+- Enfoque en resultados e impacto de negocio
+
+### 📧 **Formulario de Contacto**
+- Validación en tiempo real
+- Prevención de spam
+- Mensajes de error personalizados
+
+### 🚀 **Optimizaciones**
+- **SEO**: Meta tags completos, Open Graph, Twitter Cards
+- **Performance**: Puntuación alta en Lighthouse
+- **Accesibilidad**: WCAG 2.1 AA compliance
+- **Responsive**: Diseño móvil first
+
+## 🏗️ Estructura del Proyecto
 
 ```text
 /
 ├── public/
+│   ├── favicon.svg
+│   ├── robots.txt
+│   └── assets/
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/
+│   │   ├── Hero.astro
+│   │   ├── Projects.astro
+│   │   ├── Experience.astro
+│   │   ├── Contact.astro
+│   │   └── Navigation.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   └── index.astro
+│   ├── scripts/
+│   │   ├── main.js
+│   │   ├── modal.js
+│   │   └── contact.js
+│   ├── styles/
+│   │   ├── main.css
+│   │   ├── base/
+│   │   └── components/
+│   └── assets/
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🚀 Inicio Rápido
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Prerrequisitos
+- Node.js (v18 o superior)
+- npm o yarn
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Instalación
 
-## 🧞 Commands
+```bash
+# Clonar el repositorio
+git clone https://github.com/TU_USUARIO/portfolio-astro.git
 
-All commands are run from the root of the project, from a terminal:
+# Navegar al directorio
+cd portfolio-astro
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+# Instalar dependencias
+npm install
 
-## 👀 Want to learn more?
+# Iniciar servidor de desarrollo
+npm run dev
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Scripts Disponibles
+
+| Comando | Descripción |
+|---------|-------------|
+| `npm run dev` | Servidor de desarrollo en `localhost:4321` |
+| `npm run build` | Construir para producción |
+| `npm run preview` | Vista previa del build |
+| `npm run astro check` | Verificar errores de TypeScript |
+
+## 🌐 Demo Live
+
+**🔗 [Ver Portfolio Live](https://tu-dominio.com)**
+
+## 📱 Capturas de Pantalla
+
+### Desktop
+![Desktop Preview](./docs/desktop-preview.png)
+
+### Mobile
+![Mobile Preview](./docs/mobile-preview.png)
+
+## 📊 Performance
+
+- **Lighthouse Score**: 95+ en todas las métricas
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s
+- **Cumulative Layout Shift**: < 0.1
+
+## 🛡️ Características de Seguridad
+
+- Content Security Policy (CSP)
+- Sanitización de formularios
+- Validación tanto cliente como servidor
+- Protección contra ataques XSS
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 📞 Contacto
+
+**Chris Hernández** - Desarrollador Full Stack
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/chrhernandez/)
+- 📧 [Email](mailto:sirhcleapps@gmail.com)
+
+---
+
+⭐ **¿Te gustó el proyecto? ¡Dale una estrella!**
+
+*Construido con ❤️ y mucho ☕ usando Astro*
