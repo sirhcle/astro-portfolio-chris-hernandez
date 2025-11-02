@@ -19,6 +19,28 @@
 @import './components/contact.css';
 @import './components/footer.css';
 
+/* Utilities */
+@import './utilities/animations.css';
+@import './utilities/buttons.css';
+@import './utilities/helpers.css';
+
+/* Debug CSS para identificar overflow horizontal - TEMPORAL */
+/* TODO: Remover después de encontrar el problema */
+/* 
+* {
+    outline: 1px solid red !important;
+}
+
+body {
+    overflow-x: hidden !important;
+}
+
+* {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+*/
+
 /* Utilities - Load last */
 @import './utilities/buttons.css';
 @import './utilities/animations.css';
