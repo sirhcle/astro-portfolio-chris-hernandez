@@ -88,10 +88,10 @@ Portfolio personal desarrollado con **Astro** que muestra mis proyectos, experie
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/TU_USUARIO/portfolio-astro.git
+git clone https://github.com/sirhcle/astro-portfolio-chris-hernandez.git
 
 # Navegar al directorio
-cd portfolio-astro
+cd astro-portfolio-chris-hernandez
 
 # Instalar dependencias
 npm install
@@ -111,15 +111,7 @@ npm run dev
 
 ## 🌐 Demo Live
 
-**🔗 [Ver Portfolio Live](https://tu-dominio.com)**
-
-## 📱 Capturas de Pantalla
-
-### Desktop
-![Desktop Preview](./docs/desktop-preview.png)
-
-### Mobile
-![Mobile Preview](./docs/mobile-preview.png)
+**🔗 [Ver Portfolio Live](https://sirhcle.github.io/astro-portfolio-chris-hernandez)**
 
 ## 📊 Performance
 
@@ -155,6 +147,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 - 💼 [LinkedIn](https://www.linkedin.com/in/chrhernandez/)
 - 📧 [Email](mailto:sirhcleapps@gmail.com)
+- 🌐 [Portfolio](https://sirhcle.github.io/astro-portfolio-chris-hernandez)
 
 ---
 
