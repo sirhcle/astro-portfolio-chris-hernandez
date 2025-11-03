@@ -9,6 +9,7 @@ export class NavigationManager {
     constructor() {
         this.navToggle = Utils.$('#navToggle');
         this.navMenu = Utils.$('#navMenu');
+        this.navMenuMobile = Utils.$('#navMenuMobile');
         this.navLinks = Utils.$$('.nav-link');
         this.backToTop = Utils.$('#backToTop');
         
@@ -55,19 +56,19 @@ export class NavigationManager {
     }
 
     openMobileMenu() {
-        if (!this.navMenu || !this.navToggle) return;
+        if (!this.navMenuMobile || !this.navToggle) return;
         
         this.isMenuOpen = true;
-        this.navMenu.classList.add('active');
+        this.navMenuMobile.classList.add('active');
         this.navToggle.classList.add('active');
         this.navToggle.setAttribute('aria-expanded', 'true');
     }
 
     closeMobileMenu() {
-        if (!this.navMenu || !this.navToggle) return;
+        if (!this.navMenuMobile || !this.navToggle) return;
         
         this.isMenuOpen = false;
-        this.navMenu.classList.remove('active');
+        this.navMenuMobile.classList.remove('active');
         this.navToggle.classList.remove('active');
         this.navToggle.setAttribute('aria-expanded', 'false');
     }
