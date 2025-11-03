@@ -74,11 +74,24 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
     padding-left: var(--spacing-xl);
     padding-right: var(--spacing-xl);
+    /* box-sizing: border-box; */
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .container {
-        padding-left: var(--spacing-base);
-        padding-right: var(--spacing-base);
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
+
+@media (max-width: 480px) {
+    .container {
+        padding-left: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding-left: var(--spacing-xs);
+    }
+} */

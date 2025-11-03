@@ -213,3 +213,49 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Móviles medianos */
+@media (max-width: 768px) {
+    .about {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .about-content {
+        gap: var(--spacing-base);
+    }
+    
+    .brand-subtitle {
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .about {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .about-content {
+        gap: var(--spacing-lg);
+    }
+    
+    .about-description {
+        font-size: 1rem;
+    }
+    
+    .code-window {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .window-content {
+        padding: var(--spacing-base);
+    }
+    
+    .code-snippet {
+        font-size: 0.8rem;
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+}
