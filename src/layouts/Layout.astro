@@ -15,6 +15,20 @@ const currentYear = new Date().getFullYear();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Tema guardado (crítico - inline, se ejecuta antes del render para evitar flash) -->
+    <script is:inline>
+        (function () {
+            try {
+                const stored = localStorage.getItem('sirhcle-theme');
+                if (stored === 'light' || stored === 'dark') {
+                    document.documentElement.setAttribute('data-theme', stored);
+                }
+            } catch (error) {
+                // localStorage no disponible, se mantiene el tema por defecto
+            }
+        })();
+    </script>
+
     <!-- SEO y Metadatos Esenciales -->
     <title>{title}</title>
     <meta name="description" content={description} />

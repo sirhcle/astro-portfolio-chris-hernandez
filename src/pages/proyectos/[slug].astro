@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
+import { projects } from '../../data/projects.js';
+
+import '../../styles/main.css';
+
+export function getStaticPaths() {
+    return projects.map((project) => ({
+        params: { slug: project.slug },
+        props: { project },
+    }));
+}
+
+const { project } = Astro.props;
+---
+
+<Layout
+    title={`${project.title} | Chris Hernández - Sirhcle Apps`}
+    description={project.description}
+>
+    <Navigation />
+    <main id="main-content">
+        <section class="projects project-detail">
+            <div class="container">
+                <a href="/proyectos" class="back-link">&larr; Volver a proyectos</a>
+
+                <article class="project-detail-content">
+                    <div class="project-detail-media">
+                        <Image
+                            src={project.image}
+                            alt={project.imageAlt}
+                            width={800}
+                            height={500}
+                            loading="eager"
+                        />
+                    </div>
+
+                    <header class="project-detail-header">
+                        <div class="project-type">{project.category}</div>
+                        <h1 class="section-title">{project.title}</h1>
+                        <div class="project-tech">
+                            {project.tech.map((tech) => (
+                                <span class="tech-tag">{tech}</span>
+                            ))}
+                        </div>
+                    </header>
+
+                    <p class="project-description project-detail-description">
+                        {project.description}
+                    </p>
+
+                    {project.links.length > 0 && (
+                        <div class="project-detail-links">
+                            {project.links.map((link) => (
+                                <a
+                                    href={link.url}
+                                    class="project-link demo-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {link.label}
+                                </a>
+                            ))}
+                        </div>
+                    )}
+
+                    {project.caseStudy && (
+                        <div class="case-study-section">
+                            <h2 class="section-title">🎯 Objetivo del Proyecto</h2>
+                            <p class="section-description">{project.caseStudy.goal}</p>
+                        </div>
+                    )}
+
+                    {project.caseStudy && (
+                        <div class="case-study-section">
+                            <h2 class="section-title">⚡ Mi Rol y Contribución</h2>
+                            <ul class="contribution-list">
+                                {project.caseStudy.contributions.map((item) => (
+                                    <li>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    {project.caseStudy && (
+                        <div class="case-study-section">
+                            <h2 class="section-title">🛠️ Stack Tecnológico</h2>
+                            <div class="tech-stack-modal">
+                                {project.caseStudy.stack.map((tech) => (
+                                    <span class="tech-badge">{tech}</span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </article>
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>
+
+<script>
+    // Importar el script principal
+    import '../../scripts/main.js';
+</script>

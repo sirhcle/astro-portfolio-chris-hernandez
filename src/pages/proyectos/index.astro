@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
+import { projects } from '../../data/projects.js';
+
+import '../../styles/main.css';
+---
+
+<Layout
+    title="Proyectos | Chris Hernández - Sirhcle Apps"
+    description="Catálogo completo de proyectos móviles y web desarrollados por Chris Hernández: apps nativas, Flutter y aplicaciones React."
+>
+    <Navigation />
+    <main id="main-content">
+        <section class="projects projects-catalog">
+            <div class="container">
+                <a href="/" class="back-link">&larr; Volver al inicio</a>
+
+                <header class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-bracket">[</span>
+                        Todos los Proyectos
+                        <span class="title-bracket">]</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Catálogo completo de soluciones móviles y web
+                    </p>
+                </header>
+
+                <div class="projects-grid">
+                    {projects.map((project) => (
+                        <article class="project-card">
+                            <div class="project-image">
+                                <Image
+                                    src={project.image}
+                                    alt={project.imageAlt}
+                                    width={400}
+                                    height={250}
+                                    loading="lazy"
+                                />
+                                <div class="project-overlay">
+                                    <a href={`/proyectos/${project.slug}`} class="project-link demo-link">
+                                        Ver Detalle
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-type">{project.category}</div>
+                                <h3 class="project-title">{project.title}</h3>
+                                <p class="project-description">{project.description}</p>
+                                <div class="project-tech">
+                                    {project.tech.map((tech) => (
+                                        <span class="tech-tag">{tech}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>
+
+<script>
+    // Importar el script principal
+    import '../../scripts/main.js';
+</script>

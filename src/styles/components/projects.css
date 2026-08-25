@@ -370,6 +370,65 @@
     box-shadow: var(--shadow-accent);
 }
 
+/* Back link (used on /proyectos and /proyectos/[slug]) */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xl);
+    transition: transform var(--transition-base);
+}
+
+.back-link:hover {
+    transform: translateX(-4px);
+}
+
+/* Project Detail Page */
+.project-detail-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-detail-media {
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+    margin-bottom: var(--spacing-xl);
+    border: 1px solid var(--border-primary);
+}
+
+.project-detail-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-detail-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.project-detail-header .project-tech {
+    margin-top: var(--spacing-base);
+}
+
+.project-detail-description {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+.project-detail-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-base);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.project-detail .case-study-section .section-title {
+    justify-content: flex-start;
+}
+
 /* Responsive Projects */
 @media (max-width: 768px) {
     .projects-grid {

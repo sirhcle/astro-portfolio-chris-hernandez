@@ -75,14 +75,28 @@ export class NavigationManager {
 
     handleNavClick(e, link) {
         const href = link.getAttribute('href');
-        
-        if (href?.startsWith('#')) {
-            e.preventDefault();
-            this.scrollToSection(href);
-            
+        if (!href) return;
+
+        const hashIndex = href.indexOf('#');
+        if (hashIndex === -1) {
+            // Regular link to another page (e.g. /proyectos) - let it navigate normally
             if (this.isMenuOpen) {
                 this.closeMobileMenu();
             }
+            return;
+        }
+
+        const path = href.slice(0, hashIndex) || '/';
+        const hash = href.slice(hashIndex);
+        const isSamePage = path === window.location.pathname;
+
+        if (isSamePage) {
+            e.preventDefault();
+            this.scrollToSection(hash);
+        }
+
+        if (this.isMenuOpen) {
+            this.closeMobileMenu();
         }
     }
 
