@@ -20,6 +20,8 @@ const { project } = Astro.props;
 <Layout
     title={`${project.title} | Chris Hernández - Sirhcle Apps`}
     description={project.description}
+    image={project.image.src}
+    imageAlt={project.imageAlt}
 >
     <Navigation />
     <main id="main-content">

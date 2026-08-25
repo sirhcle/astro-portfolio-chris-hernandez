@@ -4,9 +4,16 @@ import Analytics from '@vercel/analytics/astro';
 export interface Props {
   title: string;
   description?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
-const { title, description = "Chris Hernández, desarrollador mobile y Full Stack freelancer." } = Astro.props;
+const {
+  title,
+  description = "Chris Hernández, desarrollador mobile y Full Stack freelancer.",
+  image = "/chris-hr.jpeg",
+  imageAlt = "Retrato de Chris Hernández, desarrollador Full Stack",
+} = Astro.props;
 const currentYear = new Date().getFullYear();
 ---
 
@@ -46,15 +53,15 @@ const currentYear = new Date().getFullYear();
     <meta property="og:url" content={Astro.url.href} />
     <meta property="og:site_name" content="Chris Hernández | Desarrollador Full Stack" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={new URL('/chris-hr.jpeg', Astro.url).href} />
-    <meta property="og:image:alt" content="Retrato de Chris Hernández, desarrollador Full Stack" />
+    <meta property="og:image" content={new URL(image, Astro.url).href} />
+    <meta property="og:image:alt" content={imageAlt} />
 
     <!-- Twitter Card (para Twitter/X) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL('/chris-hr.jpeg', Astro.url).href} />
-    <meta name="twitter:image:alt" content="Retrato de Chris Hernández, desarrollador Full Stack" />
+    <meta name="twitter:image" content={new URL(image, Astro.url).href} />
+    <meta name="twitter:image:alt" content={imageAlt} />
 
     <!-- Favicon y Temas de Color -->
     <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
